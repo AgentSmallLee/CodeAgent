@@ -1,0 +1,13 @@
+{
+  "name": "nova",
+  "version": "1.0.0",
+  "description": "基于大模型实现通用型AI智能体",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
