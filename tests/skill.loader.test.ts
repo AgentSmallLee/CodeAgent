@@ -2,7 +2,7 @@ import { test, describe, before } from 'node:test'
 import assert from 'node:assert/strict'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
-import { loadSkills, parseSkill, buildSkillPrompt } from '../src/skill.loader.js'
+import { loadSkills, parseSkill, buildSkillsPrompt } from '../src/skill.loader.js'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 // 从 tests/ 回到项目根，指向 .codeagent/skills
@@ -115,12 +115,12 @@ describe('buildSkillPrompt', () => {
 
   before(async () => {
     skills = await loadSkills(SKILLS_DIR)
-    prompt = buildSkillPrompt(skills)
+    prompt = buildSkillsPrompt(skills)
     console.log(prompt)
   })
 
   test('空数组返回空字符串', () => {
-    assert.equal(buildSkillPrompt([]), '')
+    assert.equal(buildSkillsPrompt([]), '')
   })
 
   test('以触发说明开头', () => {

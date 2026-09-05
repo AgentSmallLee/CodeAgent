@@ -32,3 +32,6 @@ yarn-error.log*
 .cache
 .temp
 tmp
+
+# 本地学习笔记（仅个人使用，不提交）
+question/

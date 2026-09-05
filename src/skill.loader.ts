@@ -69,6 +69,7 @@ export async function loadSkills(skillsDir: string = DEFAULT_SKILLS_DIR): Promis
       console.warn(`[skill-loader] skip ${skillPath}: frontmatter missing name or description`)
       continue
     }
+    console.log(`[skill-loader] 已加载技能 ${skill.name}`)
     skills.push(skill)
   }
   return skills
@@ -78,7 +79,7 @@ export async function loadSkills(skillsDir: string = DEFAULT_SKILLS_DIR): Promis
  * 将技能列表拼接为系统提示词片段，用于注入 agent 的 system prompt。
  * 空数组返回空字符串，由调用方决定是否拼接。
  */
-export function buildSkillPrompt(skills: Skill[]): string {
+export function buildSkillsPrompt(skills: Skill[]): string {
   if (skills.length === 0) return ''
 
   const sections = skills.map((skill) => {
