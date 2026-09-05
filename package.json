@@ -1,11 +1,16 @@
 {
-  "name": "nova",
+  "name": "codeAgent",
   "version": "1.0.0",
   "description": "基于大模型实现通用型AI智能体",
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsup",
+    "dev": "npm run build && node dist/index.js",
+    "demo:basic": "npm run build && node dist/demo-basic.js",
+    "demo:search": "npm run build && node dist/demo-search.js",
+    "demo:multi": "npm run build && node dist/demo-multi-agent.js",
+    "test": "tsx --test tests/*.test.ts"
   },
   "keywords": [],
   "author": "",
@@ -14,5 +19,12 @@
     "dotenv": "^17.4.2",
     "fs-extra": "^11.4.0",
     "openai": "^7.9.0"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.4",
+    "@types/node": "^26.4.1",
+    "tsup": "^8.5.1",
+    "tsx": "^4.23.13",
+    "typescript": "^7.0.2"
   }
 }
