@@ -2,6 +2,10 @@
 
 > 基于 **豆包（Doubao）** + TypeScript 的本地通用型 AI 代码智能体，对标 Claude Code / OpenAI Codex 产品形态。
 
+## 🎯 运行效果
+
+![CodeAgent 运行效果图](images/runtime-demo.png)
+
 ## ✨ 特性
 
 - 🧠 **默认接入豆包 Ark 大模型** — 火山引擎方舟平台，兼容 OpenAI API 协议，两行配置即可切换 DeepSeek / 通义 / Ollama 等其他模型
@@ -91,10 +95,6 @@ npm run codeAgent
 你：files    # 查看已生成的文件
 你：exit     # 退出
 ```
-
-### 运行效果
-
-![CodeAgent 运行效果图](images/runtime-demo.png)
 
 ## 🎬 演示
 
